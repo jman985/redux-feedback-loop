@@ -30,7 +30,7 @@ beginSurvey = ()=>{
 
 
         <HashRouter>
-        <Route exact path='/' render={()=><button onClick={this.beginSurvey}>Begin</button>}/>
+    <Route exact path='/' render={()=> <button onClick={this.beginSurvey}>Begin</button>}/>
         <Route path='/feeling' render={ (props)=><Feeling {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
         <Route path='/understanding' render={ (props)=><Understanding {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/>} />
         <Route path='/support' render={ (props)=><Support {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/>} />
