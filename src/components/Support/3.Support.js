@@ -7,6 +7,7 @@ class Support extends Component {
     render() {
       return (
         <div className="Support">
+            <h1>How well are you being supported?</h1>
           {/* 
             The list shouldn't go here.
             The list goes inside of the FamousSection Component
