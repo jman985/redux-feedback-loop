@@ -18,7 +18,7 @@ class App extends Component {
 beginSurvey = ()=>{
   console.log('Begin clicked');
   window.location='#/feeling';
-  // this.props.history.push('#/feeling');
+  // this.props.history.push('/feeling');
 
 }
 
@@ -29,9 +29,8 @@ beginSurvey = ()=>{
       <Header />
         <br/>
 
-
         <HashRouter>
-    <Route exact path='/' render={()=> <button onClick={this.beginSurvey}>Begin</button>}/>
+        <Route exact path='/' render={()=> <button onClick={this.beginSurvey}>Begin</button>}/>
         <Route path='/feeling' render={ (props)=><Feeling {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
         <Route path='/understanding' render={ (props)=><Understanding {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/>} />
         <Route path='/support' render={ (props)=><Support {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/>} />
@@ -44,6 +43,7 @@ beginSurvey = ()=>{
   }
 }
 
+//put reduxState on props
 const stateOnProps = ( reduxState ) => ( { reduxState } );
 
 export default connect(stateOnProps)(App);

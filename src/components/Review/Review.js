@@ -6,7 +6,10 @@ import Header from '../Header/Header';
 class Review extends Component {
 
     submitHandleClick = ()=>{
-        console.log('Next clicked');
+        console.log('Submit clicked');
+
+
+
         this.props.history.push('/thankyou');
       
       }

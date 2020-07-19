@@ -40,7 +40,7 @@ class Feeling extends Component {
         <br></br>
         <br></br>
 
-        <button onClick={this.nextHandleClick}>Next</button>
+        <button onClick={this.nextHandleClick} disabled={this.state.feeling>5||this.state.feeling<1}>Next</button>
 
         </div>
       );

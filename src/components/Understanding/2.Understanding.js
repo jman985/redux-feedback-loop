@@ -33,7 +33,7 @@ class Understanding extends Component {
         <p className="label">Understanding?</p>
         <input type="number" min="1" max="5" onChange={ ( event )=>this.handleChange( event, 'understanding') }></input>
         <br></br>
-        <button onClick={this.nextHandleClick}>Next</button>
+        <button onClick={this.nextHandleClick} disabled={this.state.understanding>5||this.state.understanding<1}>Next</button>
 
           
         </div>

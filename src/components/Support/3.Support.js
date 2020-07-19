@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 class Support extends Component {
 
     state={
-        understanding: 0
+        support: 0
       }
 
 
@@ -36,7 +36,7 @@ class Support extends Component {
         <p className="label">Support?</p>
         <input type="number" min="1" max="5" onChange={ ( event )=>this.handleChange( event, 'support') }></input>
         <br></br>
-        <button onClick={this.nextHandleClick}>Next</button>
+        <button onClick={this.nextHandleClick} disabled={this.state.support>5||this.state.support<1}>Next</button>
          
         </div>
       );

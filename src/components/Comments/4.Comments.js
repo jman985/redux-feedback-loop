@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-
 import {withRouter} from 'react-router-dom';
 
 
@@ -40,7 +39,7 @@ class Comments extends Component {
             <input type="text" placeholder="Comments?" onChange={ ( event )=>this.handleChange( event, 'comments') }></input>
             <br></br>
             <br></br>
-          <button onClick={this.nextHandleClick}>Next</button>
+          <button onClick={this.nextHandleClick} disabled={this.state.comments===''}>Next</button>
          
         </div>
       );
