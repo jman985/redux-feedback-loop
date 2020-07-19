@@ -4,11 +4,11 @@ const pool = require('../modules/pool');
 
 // POST
 router.post( '/', ( req, res )=>{
-    console.log( 'in /feedback POST:', req.body );
+    console.log( 'in /submit POST:', req.body );
     let queryString = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4)`;
     pool.query( queryString, 
-        [ req.body.day, req.body.feeling , req.body.understanding, req.body.support, req.body.comments] ).then( ( result )=>{
+        [ req.body.feeling , req.body.understanding, req.body.support, req.body.comments] ).then( ( result )=>{
             res.sendStatus( 201 );
         }).catch( ( err )=>{
             console.log( err );
@@ -17,7 +17,7 @@ router.post( '/', ( req, res )=>{
 }) // end /events POST route, INSERT query, "Create" in CRUD
 
 
-
+module.exports = router;
 
 // router.post('/', async (req, res) => {
 //     const client = await pool.connect();
