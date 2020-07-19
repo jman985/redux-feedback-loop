@@ -44,4 +44,7 @@ beginSurvey = ()=>{
   }
 }
 
-export default App;
+const stateOnProps = ( reduxState ) => ( { reduxState } );
+
+export default connect(stateOnProps)(App);
+

@@ -8,11 +8,27 @@ import {withRouter} from 'react-router-dom';
 class Comments extends Component {
 
 
+    state={
+        comments: ''
+      }
+
+
     nextHandleClick = ()=>{
         console.log('Next clicked');
         this.props.history.push('/review');
       
       }
+
+      handleChange=( event, property )=>{
+        console.log( 'in handleChange:', property, event.target.value );
+        event.preventDefault();
+
+        {this.setState({
+                [property]: event.target.value
+            })
+        }
+    }
+
 
 
     render() {
@@ -20,12 +36,12 @@ class Comments extends Component {
         <div className="Comments">
             <h1>Any comments you want to leave?</h1>
             <br></br>
-          
+            <br></br>
+            <input type="text" placeholder="Comments?" onChange={ ( event )=>this.handleChange( event, 'comments') }></input>
+            <br></br>
+            <br></br>
           <button onClick={this.nextHandleClick}>Next</button>
-          {/* 
-            The list shouldn't go here.
-            The list goes inside of the FamousSection Component
-          */}
+         
         </div>
       );
     }
