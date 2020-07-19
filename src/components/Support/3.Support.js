@@ -12,8 +12,8 @@ class Support extends Component {
 
     nextHandleClick = ()=>{
         console.log('Next clicked');
+        this.props.dispatch( { type: 'support', payload: this.state.support } );
         this.props.history.push('/comments');
-      
       }
 
 

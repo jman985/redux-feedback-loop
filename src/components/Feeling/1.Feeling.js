@@ -13,7 +13,7 @@ class Feeling extends Component {
 
     nextHandleClick = ()=>{
         console.log('Next clicked');
-        this.props.dispatch( { type: 'feeling', payload: this.state } );
+        this.props.dispatch( { type: 'feeling', payload: this.state.feeling } );
         this.props.history.push('/understanding');
       
       }
@@ -27,7 +27,6 @@ class Feeling extends Component {
             })
         }
     }
-
 
 
     render() {

@@ -11,6 +11,7 @@ class Understanding extends Component {
 
     nextHandleClick = ()=>{
         console.log('Next clicked');
+        this.props.dispatch( { type: 'understanding', payload: this.state.understanding} );
         this.props.history.push('/support');
       
       }

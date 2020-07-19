@@ -7,6 +7,7 @@ class ThankYou extends Component {
 
     newHandleClick = ()=>{
         console.log('Next clicked');
+        
         this.props.history.push('/');
       
       }
@@ -19,7 +20,6 @@ class ThankYou extends Component {
           
         <button onClick={this.newHandleClick}>Leave New Feedback</button>
 
-          
         </div>
       );
     }

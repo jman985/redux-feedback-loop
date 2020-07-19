@@ -21,27 +21,30 @@ const feedbackReducer = ( state = feedbackInitialState, action ) => {
     console.log('in feedbackReducer:', action);
     
     if (action.type === 'feeling') {
-      //update state to add the name to the list
+      //update state to feeling input to the list
       console.log('in feedbackReducer, payload is: ', action.payload)
-  
       return  {...state, feeling: action.payload}
     }else if(action.type === 'understanding'){
         console.log('in feedbackReducer, payload is: ', action.payload)
-  
         return  {...state, understanding: action.payload}
-
     }else if(action.type === 'support'){
         console.log('in feedbackReducer, payload is: ', action.payload)
-  
         return  {...state, support: action.payload}
-
     }else if(action.type === 'comments'){
         console.log('in feedbackReducer, payload is: ', action.payload)
-  
         return  {...state, comments: action.payload}
+    }else if(action.type==='submit'){
+        console.log('submit feedback: ', state)
+
+        Axios.post( '/submit', state ).then( ( response )=>{
+            console.log( 'back from POST:', response.data );
+        }).catch( ( err )=>{
+            console.log( err );
+            alert( 'nope' );
+        }) // end axios call
 
     }
-    
+
     return state;
   }
 

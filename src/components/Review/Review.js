@@ -7,9 +7,7 @@ class Review extends Component {
 
     submitHandleClick = ()=>{
         console.log('Submit clicked');
-
-
-
+        this.props.dispatch( { type: 'submit' } );
         this.props.history.push('/thankyou');
       
       }
