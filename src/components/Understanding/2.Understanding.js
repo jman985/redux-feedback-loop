@@ -4,15 +4,22 @@ import {withRouter} from 'react-router-dom';
 
 
 class Understanding extends Component {
+
+    nextHandleClick = ()=>{
+        console.log('Next clicked');
+        this.props.history.push('/support');
+      
+      }
+
     render() {
       return (
         <div className="Understanding">
         <h1>How well are you understanding the content?</h1>
+        <br></br>
+          
+          <button onClick={this.nextHandleClick}>Next</button>
 
-          {/* 
-            The list shouldn't go here.
-            The list goes inside of the FamousSection Component
-          */}
+          
         </div>
       );
     }

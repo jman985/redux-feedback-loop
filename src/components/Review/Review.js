@@ -5,17 +5,21 @@ import Header from '../Header/Header';
 
 class Review extends Component {
 
-
+    submitHandleClick = ()=>{
+        console.log('Next clicked');
+        this.props.history.push('/thankyou');
+      
+      }
 
     
     render() {
       return (
         <div className="Review">
             <h1>Review Your Feedback</h1>
-          {/* 
-            The list shouldn't go here.
-            The list goes inside of the FamousSection Component
-          */}
+            <br></br>
+          
+          <button onClick={this.submitHandleClick}>Submit</button>
+         
         </div>
       );
     }

@@ -9,6 +9,7 @@ import Understanding from '../Understanding/2.Understanding'
 import Support from '../Support/3.Support'
 import Comments from '../Comments/4.Comments'
 import Review from '../Review/Review'
+import ThankYou from '../ThankYou/ThankYou';
 
 
 class App extends Component {
@@ -36,6 +37,7 @@ beginSurvey = ()=>{
         <Route path='/support' render={ (props)=><Support {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/>} />
         <Route path='/comments' render={ (props)=><Comments {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
         <Route path='/review' render={ (props)=><Review {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
+        <Route path='/thankyou' render={ (props)=><ThankYou {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
         </HashRouter>
       </div>
     );
