@@ -4,9 +4,10 @@ import React, {Component} from 'react';
 
 class ThankYou extends Component {
 
-  //move to beginning of survey on click
+  //move to beginning of survey on click and reset state
     newHandleClick = ()=>{
         console.log('Next clicked');
+        this.props.dispatch( { type: 'reset' } );
         this.props.history.push('/');
       }
 

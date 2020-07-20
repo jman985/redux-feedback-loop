@@ -21,18 +21,22 @@ const feedbackReducer = ( state = feedbackInitialState, action ) => {
     console.log('in feedbackReducer:', action);
     
     if (action.type === 'feeling') {
-      //update state to feeling input 
+      //update states to survey input 
       console.log('in feedbackReducer, payload is: ', action.payload)
       return  {...state, feeling: action.payload}
+
     }else if(action.type === 'understanding'){
         console.log('in feedbackReducer, payload is: ', action.payload)
         return  {...state, understanding: action.payload}
+
     }else if(action.type === 'support'){
         console.log('in feedbackReducer, payload is: ', action.payload)
         return  {...state, support: action.payload}
+
     }else if(action.type === 'comments'){
         console.log('in feedbackReducer, payload is: ', action.payload)
         return  {...state, comments: action.payload}
+
     }else if(action.type==='submit'){
 
       //post survey data to database using axios
@@ -46,6 +50,10 @@ const feedbackReducer = ( state = feedbackInitialState, action ) => {
             alert( 'nope' );
         }) // end axios call
 
+    }else if(action.type==='reset'){
+      //reset feedback state
+      console.log('reset feedback: ', state)
+      return state=feedbackInitialState;
     }
 
     return state;
