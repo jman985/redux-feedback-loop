@@ -5,12 +5,13 @@ Redux Feedback Loop
 
 Duration: 2-Day Project
 
-This project seeks to create an online feedback form for Prime Academy to collect feedback data from students.  The form asks the student to rate their feelings, understanding of the material, and the supportiveness of Prime on a scale of 1 to 5, as well as enter any lingering comments.  Before submitting the form, the student has the opportunity to review their answers.  Upon submission, the student's answers are saved to a database.  Finally, the student has the option to restart the feedback survey.  
+This project seeks to create an online feedback form for Prime Academy to collect feedback data from Prime students.  The form asks each student to rate their feelings, understanding of the material, and the supportiveness of Prime on a scale of 1 to 5, as well as enter any lingering comments.  Before submitting the form, the student has the opportunity to review their answers.  Upon submission, the student's answers are saved to a database.  Finally, the student has the option to restart the feedback survey.
 
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
+- [Postgres](https://www.postgresql.org/download/)
 
 ## Installation
 
