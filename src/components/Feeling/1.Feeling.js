@@ -9,7 +9,7 @@ class Feeling extends Component {
       feeling: 0
     }
 
-
+    //dispatch 'feeling' data on click, then move to next page
     nextHandleClick = ()=>{
         console.log('Next clicked');
         this.props.dispatch( { type: 'feeling', payload: this.state.feeling } );
@@ -41,8 +41,8 @@ class Feeling extends Component {
         <button onClick={this.nextHandleClick} disabled={this.state.feeling>5||this.state.feeling<1}>Next</button>
 
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default Feeling;

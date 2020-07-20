@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 class Review extends Component {
 
+
+  //dispatch to redux on axios call
     submitHandleClick = ()=>{
         console.log('Submit clicked');
         this.props.dispatch( { type: 'submit' } );
@@ -9,7 +11,7 @@ class Review extends Component {
       
       }
 
-    
+    //render feedback data for review
     render() {
       return (
         <div className="Review">
@@ -23,8 +25,8 @@ class Review extends Component {
           <button onClick={this.submitHandleClick}>Submit</button>
          
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default Review;

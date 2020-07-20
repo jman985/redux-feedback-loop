@@ -9,7 +9,7 @@ class Support extends Component {
         support: 0
       }
 
-
+    //dispatch 'support' data on click, then move to next page
     nextHandleClick = ()=>{
         console.log('Next clicked');
         this.props.dispatch( { type: 'support', payload: this.state.support } );
@@ -39,8 +39,8 @@ class Support extends Component {
         <button onClick={this.nextHandleClick} disabled={this.state.support>5||this.state.support<1}>Next</button>
          
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default Support;

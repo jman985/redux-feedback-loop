@@ -8,6 +8,7 @@ class Understanding extends Component {
         understanding: 0
       }
 
+    //dispatch 'understanding' data on click, then move to next page
     nextHandleClick = ()=>{
         console.log('Next clicked');
         this.props.dispatch( { type: 'understanding', payload: this.state.understanding} );
@@ -37,8 +38,8 @@ class Understanding extends Component {
 
           
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default Understanding;

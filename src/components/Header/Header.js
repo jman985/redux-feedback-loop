@@ -11,8 +11,8 @@ class Header extends Component {
               <h4><i>Don't forget it!</i></h4>
             </header>
     
-        )
-      }
-}
+        )//end return
+      }//end render
+}//end class
 
 export default Header;

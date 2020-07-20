@@ -4,11 +4,10 @@ import React, {Component} from 'react';
 
 class ThankYou extends Component {
 
+  //move to beginning of survey on click
     newHandleClick = ()=>{
         console.log('Next clicked');
-        
         this.props.history.push('/');
-      
       }
 
     render() {
@@ -20,8 +19,8 @@ class ThankYou extends Component {
         <button onClick={this.newHandleClick}>Leave New Feedback</button>
 
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default ThankYou;

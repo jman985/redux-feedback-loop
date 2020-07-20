@@ -14,11 +14,10 @@ import ThankYou from '../ThankYou/ThankYou';
 
 class App extends Component {
 
-
+//move to the first page on begin click
 beginSurvey = ()=>{
   console.log('Begin clicked');
   window.location='#/feeling';
-  // this.props.history.push('/feeling');
 
 }
 
@@ -39,9 +38,9 @@ beginSurvey = ()=>{
         <Route path='/thankyou' render={ (props)=><ThankYou {...props} dispatch={ this.props.dispatch } reduxState={ this.props.reduxState }/> }/>
         </HashRouter>
       </div>
-    );
-  }
-}
+    );//end return
+  }//end render
+}//end class
 
 //put reduxState on props
 const stateOnProps = ( reduxState ) => ( { reduxState } );

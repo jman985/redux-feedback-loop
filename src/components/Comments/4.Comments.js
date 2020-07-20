@@ -11,6 +11,7 @@ class Comments extends Component {
         comments: ''
       }
 
+    //dispatch 'comments' on click, then move to next page
 
     nextHandleClick = ()=>{
         console.log('Next clicked');
@@ -42,8 +43,8 @@ class Comments extends Component {
           <button onClick={this.nextHandleClick} disabled={this.state.comments===''}>Next</button>
          
         </div>
-      );
-    }
-  }
+      );//end return
+    }//end render
+  }//end class
   
   export default Comments;

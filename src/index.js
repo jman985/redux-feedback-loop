@@ -21,7 +21,7 @@ const feedbackReducer = ( state = feedbackInitialState, action ) => {
     console.log('in feedbackReducer:', action);
     
     if (action.type === 'feeling') {
-      //update state to feeling input to the list
+      //update state to feeling input 
       console.log('in feedbackReducer, payload is: ', action.payload)
       return  {...state, feeling: action.payload}
     }else if(action.type === 'understanding'){
@@ -34,6 +34,9 @@ const feedbackReducer = ( state = feedbackInitialState, action ) => {
         console.log('in feedbackReducer, payload is: ', action.payload)
         return  {...state, comments: action.payload}
     }else if(action.type==='submit'){
+
+      //post survey data to database using axios
+
         console.log('submit feedback: ', state)
 
         Axios.post( '/submit', state ).then( ( response )=>{
@@ -64,4 +67,4 @@ const storeInstance = createStore(
 
 ReactDOM.render(<Provider store={storeInstance}><App/></Provider>, document.getElementById('root'));
 
-// registerServiceWorker();
+registerServiceWorker();
