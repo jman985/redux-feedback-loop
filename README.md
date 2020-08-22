@@ -1,5 +1,5 @@
-# PROJECT NAME
-Redux Feedback Loop
+# Redux Feedback Loop
+
 
 ## Description
 
